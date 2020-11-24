@@ -32,3 +32,8 @@ startTimer = (event) => {
       seconds--;
     }, 1000);
 };
+
+stopTimer = (event) => {
+  clearInterval(t);
+  status = false;
+};
