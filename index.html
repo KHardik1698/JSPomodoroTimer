@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <h1>Javascript Pomodoro Timer</h1>
+    <div id="root">
+      <input type="button" value="Pomodoro" onClick="pomodoro(event)" />
+      <input type="button" value="Short Break" onClick="shortBreak(event)" />
+      <h1 id="time-heading">00:00:00</h1>
+      <input type="button" value="Start" onClick="startTimer(event)" />
+      <input type="button" value="Pause" onClick="stopTimer(event)" />
+      <input type="button" value="Reset" onClick="resetTimer(event)" />
+    </div>
+  </body>
+  <script src="./src/01-timer.js"></script>
+</html>
