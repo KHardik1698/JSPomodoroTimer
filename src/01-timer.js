@@ -37,3 +37,12 @@ stopTimer = (event) => {
   clearInterval(t);
   status = false;
 };
+
+resetTimer = (event) => {
+  clearInterval(t);
+  status = false;
+  hours = 0;
+  minutes = 0;
+  seconds = 0;
+  text.innerHTML = hours + ":" + minutes + ":" + seconds;
+};
