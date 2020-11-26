@@ -1,26 +1,9 @@
 let divRoot = document.getElementById("root");
 
 let hours = 0;
-let minutes = 0;
+let minutes = 25;
 let seconds = 0;
-
-pomodoro = (event) => {
-  minutes = 25;
-  seconds = 0;
-  document.getElementById("pomodoro-heading").innerHTML =
-    "Default Pomodoro Time " + hours + ":" + minutes + ":" + seconds;
-  document.getElementById("current-timer-heading").innerHTML =
-    "Current Timer : Pomodoro";
-};
-
-shortBreak = (event) => {
-  minutes = 5;
-  seconds = 0;
-  document.getElementById("short-break-heading").innerHTML =
-    "Default Short Break Time " + hours + ":" + minutes + ":" + seconds;
-  document.getElementById("current-timer-heading").innerHTML =
-    "Current Timer : Short Break";
-};
+let elapsed = 0;
 
 let text = document.getElementById("time-heading");
 let t;
@@ -40,14 +23,23 @@ startTimer = (event) => {
             hours = 0;
             minutes = 0;
             seconds = 0;
-            document.getElementById("time-heading").innerHTML =
-              "00:00:00 Timer Expired";
+            text.innerHTML = "00:00:00 Timer Expired";
+            window.alert("Timer Expired");
+            window.alert(
+              `Elapsed time : ${Math.floor((elapsed - 1) / 60)} Minutes : ${
+                (elapsed - 1) % 60
+              } Seconds`
+            );
+            clearInterval(t);
+            status = false;
           }
         }
       }
       if (text.innerHTML !== "00:00:00 Timer Expired")
         text.innerHTML = hours + ":" + minutes + ":" + seconds;
       seconds--;
+      elapsed++;
+      console.log(elapsed);
     }, 1000);
 };
 
