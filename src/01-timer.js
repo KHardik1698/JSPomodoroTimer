@@ -5,6 +5,10 @@ let minutes = 25;
 let seconds = 0;
 let elapsed = 0;
 
+let displayHours = hours;
+let displayMinutes = minutes;
+let displaySeconds = seconds;
+
 let text = document.getElementById("time-heading");
 let t;
 let status = false;
@@ -35,8 +39,24 @@ startTimer = (event) => {
           }
         }
       }
+      if (seconds < 10) {
+        displaySeconds = 0 + seconds.toString();
+      } else {
+        displaySeconds = seconds;
+      }
+      if (minutes < 10) {
+        displayMinutes = 0 + minutes.toString();
+      } else {
+        displayMinutes = minutes;
+      }
+      if (hours < 10) {
+        displayHours = 0 + hours.toString();
+      } else {
+        displayHours = hours;
+      }
       if (text.innerHTML !== "00:00:00 Timer Expired")
-        text.innerHTML = hours + ":" + minutes + ":" + seconds;
+        text.innerHTML =
+          displayHours + ":" + displayMinutes + ":" + displaySeconds;
       seconds--;
       elapsed++;
       console.log(elapsed);
