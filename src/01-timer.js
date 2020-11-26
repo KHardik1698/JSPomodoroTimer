@@ -9,6 +9,30 @@ let displayHours = hours;
 let displayMinutes = minutes;
 let displaySeconds = seconds;
 
+pomodoro = (event) => {
+  let pomoInput = document.getElementById("pomoDefault").value;
+  if (pomoInput) {
+    minutes = pomoInput;
+  } else {
+    minutes = 25;
+  }
+  seconds = 0;
+  document.getElementById("current-timer-heading").innerHTML =
+    "Current Timer : Pomodoro";
+};
+
+shortBreak = (event) => {
+  let shortInput = document.getElementById("shortDefault").value;
+  if (shortInput) {
+    minutes = shortInput;
+  } else {
+    minutes = 5;
+  }
+  seconds = 0;
+  document.getElementById("current-timer-heading").innerHTML =
+    "Current Timer : Short Break";
+};
+
 let text = document.getElementById("time-heading");
 let t;
 let status = false;
@@ -59,7 +83,6 @@ startTimer = (event) => {
           displayHours + ":" + displayMinutes + ":" + displaySeconds;
       seconds--;
       elapsed++;
-      console.log(elapsed);
     }, 1000);
 };
 
