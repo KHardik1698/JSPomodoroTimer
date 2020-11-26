@@ -33,6 +33,18 @@ shortBreak = (event) => {
     "Current Timer : Short Break";
 };
 
+increaseTime = (event) => {
+  if (minutes < 59) minutes++;
+  else {
+    minutes = 0;
+    hours++;
+  }
+};
+
+decreaseTime = (event) => {
+  if (minutes > 0) minutes--;
+};
+
 let text = document.getElementById("time-heading");
 let t;
 let status = false;
@@ -94,6 +106,7 @@ stopTimer = (event) => {
 resetTimer = (event) => {
   clearInterval(t);
   status = false;
+  elapsed = 0;
   pomodoro();
   text.innerHTML = hours + ":" + minutes + ":" + seconds;
 };
