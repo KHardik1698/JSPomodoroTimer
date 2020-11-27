@@ -50,9 +50,11 @@ let t;
 let status = false;
 
 startTimer = (event) => {
-  if (status == false)
+  if (status == false) {
+    status = true;
     t = setInterval(() => {
-      status = true;
+      seconds--;
+      elapsed++;
       if (
         document.getElementById("current-timer-heading").innerHTML ==
         "Current Timer : None"
@@ -99,9 +101,8 @@ startTimer = (event) => {
       if (text.innerHTML !== "00:00:00 Timer Expired")
         text.innerHTML =
           displayHours + ":" + displayMinutes + ":" + displaySeconds;
-      seconds--;
-      elapsed++;
     }, 1000);
+  }
 };
 
 stopTimer = (event) => {
@@ -112,7 +113,16 @@ stopTimer = (event) => {
 resetTimer = (event) => {
   clearInterval(t);
   status = false;
-  elapsed = 0;
-  pomodoro();
+  hours = 0;
+  minutes = 25;
+  seconds = 0;
   text.innerHTML = "00:" + minutes + ":00";
+  document.getElementById("current-timer-heading").innerHTML =
+    "Current Timer : None";
+  window.alert(
+    `Elapsed time : ${Math.floor(elapsed / 60)} Minutes : ${
+      elapsed % 60
+    } Seconds`
+  );
+  elapsed = 0;
 };

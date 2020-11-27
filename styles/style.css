@@ -4,27 +4,27 @@ body {
   padding: 0px;
 }
 body {
-  background-color: rgba(0, 204, 255, 0.658);
+  background-color: white;
 }
 #root {
-  width: 50vw;
+  width: 80vw;
   height: 100vh;
   margin: auto;
-  background-color: cyan;
+  background-color: black;
   text-align: center;
 }
 .page-heading {
   padding: 2vw;
   margin: 0px;
   font-size: 3vw;
+  color: white;
 }
 #time-heading {
   font-size: 4vw;
+  color: white;
 }
 .timer-button {
   border-style: none;
-  background-color: black;
-  color: white;
   font-size: 1vw;
   padding: 1vw;
   margin: 1vw;
@@ -32,4 +32,5 @@ body {
 .input-time,
 #current-timer-heading {
   font-size: 1.5vw;
+  color: white;
 }
