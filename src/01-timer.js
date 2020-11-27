@@ -53,6 +53,12 @@ startTimer = (event) => {
   if (status == false)
     t = setInterval(() => {
       status = true;
+      if (
+        document.getElementById("current-timer-heading").innerHTML ==
+        "Current Timer : None"
+      )
+        document.getElementById("current-timer-heading").innerHTML =
+          "Current Timer : Default";
       if (seconds < 0) {
         seconds = 59;
         minutes--;
@@ -108,5 +114,5 @@ resetTimer = (event) => {
   status = false;
   elapsed = 0;
   pomodoro();
-  text.innerHTML = hours + ":" + minutes + ":" + seconds;
+  text.innerHTML = "00:" + minutes + ":00";
 };

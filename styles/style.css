@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: rgba(0, 204, 255, 0.658);
+}
+#root {
+  width: 50vw;
+  height: 100vh;
+  margin: auto;
+  background-color: cyan;
+  text-align: center;
+}
+.page-heading {
+  padding: 2vw;
+  margin: 0px;
+  font-size: 3vw;
+}
+#time-heading {
+  font-size: 4vw;
+}
+.timer-button {
+  border-style: none;
+  background-color: black;
+  color: white;
+  font-size: 1vw;
+  padding: 1vw;
+  margin: 1vw;
+}
+.input-time,
+#current-timer-heading {
+  font-size: 1.5vw;
+}

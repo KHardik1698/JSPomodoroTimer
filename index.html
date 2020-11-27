@@ -4,35 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <h1>Javascript Pomodoro Timer</h1>
     <div id="root">
-      <label for="pomoDefault">Set Pomodoro Timer Duration</label>
-      <input type="text" name="pomoDefault" id="pomoDefault" />
+      <h1 class="page-heading">Javascript Pomodoro Timer</h1>
+      <label for="pomoDefault" class="input-time"
+        >Set Pomodoro Timer Duration</label
+      >
+      <input
+        type="text"
+        class="input-time"
+        name="pomoDefault"
+        id="pomoDefault"
+      />
       <br />
       <input
         type="button"
+        class="timer-button"
         value="Start Pomodoro Timer"
         onClick="pomodoro(event)"
       />
       <hr />
-      <label for="shortDefault">Set Short Break Timer Duration</label>
-      <input type="text" name="shortDefault" id="shortDefault" />
+      <label for="shortDefault" class="input-time"
+        >Set Short Break Timer Duration</label
+      >
+      <input
+        type="text"
+        class="input-time"
+        name="shortDefault"
+        id="shortDefault"
+      />
       <br />
       <input
         type="button"
+        class="timer-button"
         value="Start Short Break Timer"
         onClick="shortBreak(event)"
       />
       <hr />
       <p id="current-timer-heading">Current Timer : None</p>
-      <input type="button" value="+1 minute" onClick="increaseTime(event)" />
-      <input type="button" value="-1 minute" onClick="decreaseTime(event)" />
+      <input
+        type="button"
+        class="timer-button"
+        value="+1 minute"
+        onClick="increaseTime(event)"
+      />
+      <input
+        type="button"
+        class="timer-button"
+        value="-1 minute"
+        onClick="decreaseTime(event)"
+      />
       <h1 id="time-heading">00:00:00</h1>
-      <input type="button" value="Start" onClick="startTimer(event)" />
-      <input type="button" value="Pause" onClick="stopTimer(event)" />
-      <input type="button" value="Reset" onClick="resetTimer(event)" />
+      <input
+        type="button"
+        class="timer-button"
+        value="Start"
+        onClick="startTimer(event)"
+      />
+      <input
+        type="button"
+        class="timer-button"
+        value="Pause"
+        onClick="stopTimer(event)"
+      />
+      <input
+        type="button"
+        class="timer-button"
+        value="Reset"
+        onClick="resetTimer(event)"
+      />
     </div>
   </body>
   <script src="./src/01-timer.js"></script>
