@@ -1,7 +1,7 @@
 let divRoot = document.getElementById("root");
 
 let hours = 0;
-let minutes = 25;
+let minutes = 20;
 let seconds = 0;
 let elapsed = 0;
 
@@ -17,6 +17,7 @@ pomodoro = (event) => {
   } else {
     minutes = 25;
   }
+  hours = 0;
   seconds = 0;
   document.getElementById("pomoDefault").value = "";
   document.getElementById("current-timer-heading").innerHTML =
@@ -31,6 +32,7 @@ shortBreak = (event) => {
   } else {
     minutes = 5;
   }
+  hours = 0;
   seconds = 0;
   document.getElementById("shortDefault").value = "";
   document.getElementById("current-timer-heading").innerHTML =
@@ -39,7 +41,7 @@ shortBreak = (event) => {
 
 increaseTime = (event) => {
   if (minutes < 59) minutes++;
-  else {
+  else if (hours < 23) {
     minutes = 0;
     hours++;
   }
@@ -47,6 +49,10 @@ increaseTime = (event) => {
 
 decreaseTime = (event) => {
   if (minutes > 0) minutes--;
+  else if (hours > 0) {
+    minutes = 59;
+    hours--;
+  }
 };
 
 let text = document.getElementById("time-heading");
