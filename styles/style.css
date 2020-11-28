@@ -29,8 +29,11 @@ body {
   padding: 1vw;
   margin: 1vw;
 }
-.input-time,
+.label-input-time,
 #current-timer-heading {
   font-size: 1.5vw;
   color: white;
+}
+.input-time {
+  font-size: 1.5vw;
 }
