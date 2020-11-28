@@ -1,7 +1,7 @@
 let divRoot = document.getElementById("root");
 
 let hours = 0;
-let minutes = 20;
+let minutes = 25;
 let seconds = 0;
 let elapsed = 0;
 
@@ -64,10 +64,10 @@ startTimer = (event) => {
     status = true;
     t = setInterval(() => {
       seconds--;
-      elapsed++;
       document.title = `Pomodoro Timer (${Math.floor(elapsed / 3600) % 60}:${
         Math.floor(elapsed / 60) % 60
       }:${elapsed % 60})`;
+      elapsed++;
       if (
         document.getElementById("current-timer-heading").innerHTML ==
         "Current Timer : None"
@@ -87,7 +87,9 @@ startTimer = (event) => {
             text.innerHTML = "00:00:00 Timer Expired";
             window.alert("Timer Expired");
             window.alert(
-              `Elapsed time : ${Math.floor((elapsed - 1) / 60)} Minutes : ${
+              `Elapsed time : ${
+                Math.floor(elapsed / 3600) % 60
+              } Hours : ${Math.floor((elapsed - 1) / 60)} Minutes : ${
                 (elapsed - 1) % 60
               } Seconds`
             );
@@ -133,9 +135,9 @@ resetTimer = (event) => {
   document.getElementById("current-timer-heading").innerHTML =
     "Current Timer : None";
   window.alert(
-    `Elapsed time : ${Math.floor(elapsed / 60)} Minutes : ${
-      elapsed % 60
-    } Seconds`
+    `Elapsed time : ${Math.floor(elapsed / 3600) % 60} Hours : ${Math.floor(
+      elapsed / 60
+    )} Minutes : ${elapsed % 60} Seconds`
   );
   elapsed = 0;
   document.title = "Pomodoro Timer";
