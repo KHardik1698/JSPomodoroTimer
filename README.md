@@ -82,13 +82,13 @@ The Input is divided into 2 parts, one is the original input which is a string, 
 Now, 3 values are passed to the isValid() function, i.e. "num" which is the number, "str" which is the string, & "limit" which is the maximum minutes for that particular Timer.\
 Now the isValid function is where all our Validation is checked.\
 The various validation conditions are:\
-If str not is equal to num & str.length is greater than 0,\
-if str.length is greater than 2,\
-if num is between 0 & 60,\
-if str is equal to num & str.length is not 1 but greater than 2,\
-if str.length is equal to 0,\
-if num is greater than value.\
+If the input is a number or not,\
+if the number is a 2 digit number or not,\
+if the number is between 0 & 60,\
+if there are any blank spaces,\
+if the number is greater than value.\
 All of these conditions determine some sort of an Invalid Input, & will give some sort of alert.\
+If there is no input, then too a boolean "false" will be returned so that the default value is assigned to the timer.\
 If all these conditions are passed, only then a boolean "true" is returned.
 
 # Demo:
