@@ -65,6 +65,9 @@ startTimer = (event) => {
     t = setInterval(() => {
       seconds--;
       elapsed++;
+      document.title = `Pomodoro Timer (${Math.floor(elapsed / 3600) % 60}:${
+        Math.floor(elapsed / 60) % 60
+      }:${elapsed % 60})`;
       if (
         document.getElementById("current-timer-heading").innerHTML ==
         "Current Timer : None"
@@ -135,6 +138,7 @@ resetTimer = (event) => {
     } Seconds`
   );
   elapsed = 0;
+  document.title = "Pomodoro Timer";
 };
 
 const inputValidation = (input, limit) => {
