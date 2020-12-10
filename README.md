@@ -1,4 +1,4 @@
-# JavaScript PomodoroTimer
+# JavaScript Pomodoro Timer
 
 This Repository contains a simple Pomodoro Timer Application made using Vanilla JavaScript Functions.\
 It gives the functionality to Start the Timer, Pause the Timer, & Reset the Timer.\
@@ -93,5 +93,5 @@ If all these conditions are passed, only then a boolean "true" is returned.
 
 # Demo:
 
-Live Demo of the JavaScript Timer can be found here:\
+Live Demo of the JavaScript Pomodoro Timer can be found here:\
 https://khardik1698.github.io/JSPomodoroTimer/
